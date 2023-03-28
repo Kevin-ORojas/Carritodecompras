@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academlo Store</title>
+    <link rel="icon" href="./assets/icons/aca_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=PT+Sans:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/main.js" type="module" defer></script>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader__container">
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#slider__section" class="nav__logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="logo--icon">
+                    <path fill="currentColor" d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                    </path>
+                </svg>
+            </a>
+
+            <div class="nav__menu">
+                <button type="button" class="nav__btn btn--close">
+                    <i class="bx bx-x"></i>
+                </button>
+
+                <ul class="nav__list">
+                    <li class="nav__items">
+                        <a href="#slider__section" class="nav__link">Inicio</a>
+                    </li>
+                    <li class="nav__items">
+                        <a href="#products__section" class="nav__link">Productos</a>
+                    </li>
+
+                    <li class="nav__items">
+                        <a href="#footer__section" class="nav__link">Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__buttons">
+
+                <button type='button' id="bdark"><i class='bx bx-toggle-right bx-flip-horizontal' ></i>
+                </button>
+
+                <button type="button" class="nav__btn btn--cart">
+                    <i class="bx bx-shopping-bag"></i>
+                    <span class="notify">0</span>
+                </button>
+
+                <button type="button" class="nav__btn btn--menu">
+                    <i class="bx bx-grid-alt"></i>
+                </button>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Slider -->
+    <section class="container-slider" id="slider__section">
+        <div class="slider" id="slider">
+            <div class="slider__section">
+                <img src="./assets/img/slider-ima1.jpg" alt="" class="slider__img">
+                <div class="slider__content"></div>
+            </div>
+            <div class="slider__section">
+                <img src="/assets/img/slider-im2.jpg" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="/assets/img/slider-im3.jpg" alt="" class="slider__img">
+            </div>
+            <div class="slider__section">
+                <img src="/assets/img/slider-im4.jpg" alt="" class="slider__img">
+            </div>
+        </div>
+        
+        <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+        <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+    </section>
+
+
+    <!-- Main -->
+    <main class="main">
+        <section class="products section" id="products__section">
+            <h2 class="products__title section--title">Productos</h2>
+            <div class="products__container container">
+                <!-- <article class="product">
+                    <div class="product__image">
+                        <img src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270464/eCommerce/shirt1_prckre.png" alt="Producto 1">
+                    </div>
+                    <div class="product__content">
+                        <button type="button" class="product__btn add--to--cart">
+                            <i class="bx bx-cart-add"></i>
+                        </button>
+                        <span class="product__price">$10</span>
+                        <span class="product__stock">Disponibles: 3</span>
+                        <h3 class="product__title">Camiseta de manga corta con cuello redondo</h3>
+                    </div>
+                </article> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart -->
+    <div class="cart">
+        <div class="cart__container">
+            <div class="cart__header">
+                <h3 class="cart__title">Carrito de Compras</h3>
+                <button type="button" class="cart__btn btn--close">
+                    <i class="bx bx-x"></i>
+                </button>
+            </div>
+
+            <div class="cart__body">
+                <!-- <div class="cart__empty">
+                    <i class="bx bx-cart"></i>
+                    <p class="cart__empty--text">No hay productos en el carrito</p>
+                </div> -->
+
+                <!-- <article class="article">
+
+                    <div class="article__image">
+                        <img src="https://res.cloudinary.com/duu1imwxs/image/upload/v1677270464/eCommerce/shirt1_prckre.png" alt="Product 1">
+                    </div>
+
+                    <div class="article__content">
+                        <h3 class="article__title">Camiseta de manga corta con cuello redondo</h3>
+                        <span class="article__price">$10</span>
+
+                        <div class="article__quantity">
+                            <button type="button" class="article__quantity-btn article--minus">
+                                <i class="bx bx-minus"></i>
+                            </button>
+
+                            <span class="article__quantity-text">1</span>
+
+                            <button type="button" class="article__quantity-btn article--plus">
+                                <i class="bx bx-plus"></i>
+                            </button>
+                        </div>
+
+                        <button type="button" class="article__btn remove-from-cart">
+                            <i class="bx bx-trash"></i>
+                        </button>
+                    </div>
+                </article> -->
+            </div>
+
+            <div class="cart__footer">
+
+                <div class="cart__subtotal">
+                    <span class="cart__subtotal--text">Subtotal</span>
+                    <span class="cart__subtotal--item">$0</span>
+                </div>
+
+                <div class="cart__iva">
+                    <span class="cart__iva--text">Iva</span>
+                    <span class="cart__iva--item">$0</span>
+                </div>
+
+                <div class="cart__count">
+                    <span class="cart__count--text">Articulos</span>
+                    <span class="cart__count--item">0</span>
+                </div>
+
+                <div class="cart__total">
+                    <span class="cart__total--text">Total</span>
+                    <span class="cart__total--item">$0</span>
+                </div>
+
+                <button type="button" class="cart__btn btn--buy">Comprar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Button  -->
+    <div class="contact">
+        <a class="contact__button"></a>
+    </div>
+
+    <div class="form__container">
+        <form class="form" action="">
+            <h3 class="form__title">Información Personal</h3>
+            <div class="form__contact">
+
+                <div class="form__group">
+                    <input type="text" id="name" class="form__input" placeholder=" " required>
+                    <label for="name" class="form__label">Nombre</label>
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__group">
+                    <input type="email" id="email" class="form__input" placeholder=" " required>
+                    <label for="email" class="form__label">Correo</label>
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__group">
+                    <input type="tel" id="phone" class="form__input" placeholder=" " required>
+                    <label for="phone" class="form__label">Teléfono</label>
+                    <span class="form__line"></span>
+                </div>
+                
+                <div class="form__message" >
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" class="form__area" required placeholder="Escribe aquí tu mensaje"></textarea>
+                </div>
+                
+                <input type="submit" value="Contactar" class="form__submit btn--submit">
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- Modal Members  -->
+    <section class="modal__global modal__members">
+        <div class="modal__container">
+            <img src="./assets/img/devImage.svg" alt="Imagen de desarrollador web" class="modal__img">
+            <h2 class="modal__title">Integrantes de Gen24-10</h2>
+            <p class="modal__paragraph modal__paragraph__m1"> Nuestro equipo está compuesto por un grupo de profesionales altamente capacitados y comprometidos, que trabajan juntos para lograr los objetivos de cada proyecto. Cada miembro del equipo tiene habilidades y conocimientos únicos que se complementan entre sí, lo que nos permite abordar cualquier desafío con confianza y eficacia.</p>
+            <p class="modal__paragraph"> <strong>Integrantes: </strong> Ricardo Mejia, Diego Téllez, Oscar Lopez, Esneyder Miranda, Carlos Franco, Vivian La Farina, Carlos Alberto Santos y Kevin Rojas </p>
+            <button href="#" class="modal__close__global modal__close">Cerrar</button>
+        </div>
+    </section>
+
+    <!-- Modal Gracias por contactarnos -->
+    <section class="modal__global modal__thanks">
+        <div class="modal__container__thanks">
+            <img src="./assets/img/Quality Check_Outline.svg" alt="Imagen de desarrollador web" class="modal__img">
+            <p class="modal__paragraph"> !Gracias por contactarnos!</p>
+            <p class="modal__paragraph">Pronto nos pondremos en contacto contigo.</p>
+            <button class="modal__close__global modal__close__thanks">Aceptar</button>
+        </div>
+    </section>
+
+
+    <!-- Modal checkout -->
+    <section class="modal__global modal__checkout">
+        <div class="modal__container__checkout">
+            <i class='bx bx-check-circle modal__icon__check'></i>
+            <p class="modal__paragraph">!Gracias por tu compra!</p>
+            <button class="modal__close__global modal__close__checkout">Aceptar</button>
+        </div>
+    </section>
+
+    <!-- Modal Stock Agotado -->
+    <section class="modal__global modal__stock">
+        <div class="modal__container__stock">
+            <i class='bx bxs-error-alt modal__icon__error'></i>
+            <p class="modal__paragraph">!Lo sentimos! <br> No puedes agregar más veces este producto.</p>
+            <button class="modal__close__global modal__close__stock">Aceptar</button>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="footer__container container" id="footer__section">
+            <div class="footer__top">
+
+                <div class="footer__description">
+                    <h3 class="footer__title">Sobre Nosotros</h3>
+                    <p class="footer__text">Somos Gen24-10, una empresa de desarrollo web que brinda las mejores oportunidades para expandir tu negocio y alcanzar los números de ventas que  siempre has soñado.</p>
+                </div>
+            </div>
+
+            <div class="footer__boxes">
+                <div class="box1">
+                    <h3 class="footer__title">Redes Sociales</h3>
+                    <ul class="footer__social">
+                        <li class="footer__item">
+                            <a href="https://github.com/diegotellezc/academloShop" target="_blank" class="footer__link">
+                                <i class="bx bxl-github"></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.instagram.com/academlohq/" target="_blank" class="footer__link">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="https://www.linkedin.com/school/academlo/" target="_blank" class="footer__link">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box2">
+                    <h3 class="footer__title">Integrantes</h3>
+                    <ul class="footer__social">
+                        <li class="footer__item">
+                            <button type="button" class="btn__members">
+                                <i class='bx bx-face'></i>
+                                <i class='bx bxs-face'></i>
+                            </button>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <div class="box3">
+                    <h3 class="footer__title">Medios de Pago</h3>
+                    <ul class="footer__social">
+                        <li class="footer__item">
+                            <a href="#footer__section" class="footer__link footer__payments">
+                                <i class='bx bxl-mastercard'></i>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#footer__section"class="footer__link footer__payments">
+                                <i class='bx bxl-visa' ></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="footer__bottom">
+                <p class="footer__text">&copy Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
